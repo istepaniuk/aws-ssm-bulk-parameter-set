@@ -1,6 +1,6 @@
 # SSM Bulk set scripts
 
-Dump all parameters like this:
+Dump all existing parameters like this:
 ```
 ./get-all-parameters.sh > my_ssm_parameters
 ```
@@ -11,7 +11,9 @@ SOME_PARAMETER=the-value
 SOME_OTHER_PARAMETER=more values
 ```
 
-Load all parameters into SSM like this:
+Overwrite the value of all (existing!) parameters into SSM like this:
 ```
 ./set-parameters-from-stdin.sh < my_ssm_parameters
 ```
+
+You need the `aws` cli v1 and `jq`.
